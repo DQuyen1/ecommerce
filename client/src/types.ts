@@ -79,3 +79,29 @@ export interface ContactPayload {
   phone?: string;
   message: string;
 }
+
+/* ------------------------------------------------------------------
+   Admin dashboard payloads — writes always send the full object, so
+   these mirror the read shapes minus id/timestamps.
+   ------------------------------------------------------------------ */
+
+export interface ProductPayload {
+  name: string;
+  category: ProductCategory;
+  description: string;
+  images: string[];
+}
+
+export interface ArticlePayload {
+  title: string;
+  topic: string;
+  content: string;
+}
+
+export interface JobPayload {
+  title: string;
+  location: string;
+  type: string;
+  requirements: string;
+  benefits: string;
+}

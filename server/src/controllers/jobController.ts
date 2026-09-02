@@ -28,7 +28,7 @@ export const updateJob = asyncHandler(async (req: Request, res: Response) => {
   const job = await Job.findByIdAndUpdate(
     req.params.id,
     { title, location, type, requirements, benefits },
-    { new: true, runValidators: true, omitUndefined: true }
+    { new: true, runValidators: true }
   );
   if (!job) {
     res.status(404).json({ error: "Job not found" });

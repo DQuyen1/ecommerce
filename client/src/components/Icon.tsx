@@ -222,6 +222,93 @@ export function IconStar({ className, style }: IconProps) {
   );
 }
 
+/* ------------------------------------------------------------------
+   Admin dashboard icons
+   ------------------------------------------------------------------ */
+
+export function IconPencil({ className, style }: IconProps) {
+  return (
+    <svg {...base} className={className} style={style} aria-hidden="true">
+      <path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z" />
+    </svg>
+  );
+}
+
+export function IconTrash({ className, style }: IconProps) {
+  return (
+    <svg {...base} className={className} style={style} aria-hidden="true">
+      <path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m3 0-1 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 6h14Z" />
+      <path d="M10 11v6M14 11v6" />
+    </svg>
+  );
+}
+
+export function IconPlus({ className, style }: IconProps) {
+  return (
+    <svg {...base} className={className} style={style} aria-hidden="true">
+      <path d="M12 5v14M5 12h14" />
+    </svg>
+  );
+}
+
+export function IconX({ className, style }: IconProps) {
+  return (
+    <svg {...base} className={className} style={style} aria-hidden="true">
+      <path d="M18 6 6 18M6 6l12 12" />
+    </svg>
+  );
+}
+
+export function IconLock({ className, style }: IconProps) {
+  return (
+    <svg {...base} className={className} style={style} aria-hidden="true">
+      <path d="M5 11h14v10H5z" />
+      <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+    </svg>
+  );
+}
+
+export function IconLogOut({ className, style }: IconProps) {
+  return (
+    <svg {...base} className={className} style={style} aria-hidden="true">
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+    </svg>
+  );
+}
+
+export function IconInbox({ className, style }: IconProps) {
+  return (
+    <svg {...base} className={className} style={style} aria-hidden="true">
+      <path d="M22 12h-6l-2 3h-4l-2-3H2" />
+      <path d="M5.5 5h13l3.5 7v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7l3.5-7Z" />
+    </svg>
+  );
+}
+
+export function IconMessage({ className, style }: IconProps) {
+  return (
+    <svg {...base} className={className} style={style} aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z" />
+    </svg>
+  );
+}
+
+export function IconDownload({ className, style }: IconProps) {
+  return (
+    <svg {...base} className={className} style={style} aria-hidden="true">
+      <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+    </svg>
+  );
+}
+
+export function IconExternal({ className, style }: IconProps) {
+  return (
+    <svg {...base} className={className} style={style} aria-hidden="true">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
+    </svg>
+  );
+}
+
 /**
  * Isometric stack of cartons on an orbiting ring — the hero illustration.
  * The `ha-*` classes are animated in the stylesheet so reduced motion can

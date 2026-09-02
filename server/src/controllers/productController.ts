@@ -36,7 +36,7 @@ export const updateProduct = asyncHandler(async (req: Request, res: Response) =>
   const product = await Product.findByIdAndUpdate(
     req.params.id,
     { name, category, description, images },
-    { new: true, runValidators: true, omitUndefined: true }
+    { new: true, runValidators: true }
   );
   if (!product) {
     res.status(404).json({ error: "Product not found" });

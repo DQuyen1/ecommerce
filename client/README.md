@@ -1,7 +1,7 @@
 # Client
 
-React 19 + Vite front end. See the [root README](../README.md) for setup and the
-rebranding checklist.
+React 19 + Vite front end. See the [root README](../README.md) for setup, the
+rebranding checklist, and Vercel deploy steps (`vercel.json` lives in this folder).
 
 ## Scripts
 
@@ -17,7 +17,8 @@ rebranding checklist.
 ```
 src/
   config/site.ts      ← all company content: name, contact, copy, categories
-  api.ts              typed fetch wrapper around the REST API
+  api.ts              typed fetch wrapper around the REST API (public + admin)
+  adminAuth.ts         admin JWT storage (localStorage), read by api.ts
   types.ts            API response shapes
   index.css           design system — brand tokens in :root at the top
   components/
@@ -30,7 +31,15 @@ src/
     useAsync.ts       fetch + loading/error state, ignores stale results
     useReveal.ts      IntersectionObserver reveal + animated counters
     useMotion.ts      pointer-driven effects: cursor highlight, magnetic buttons, tilt
-  pages/              one file per route
+    useAdminGuard.ts  redirects to /admin/login on a 401 from an admin call
+  pages/              one file per public route
+  pages/admin/        /admin/* — see the root README's Admin Dashboard section
+    RequireAdmin.tsx  route guard for the whole /admin tree
+    AdminLogin.tsx    password → JWT
+    AdminLayout.tsx   sidebar shell (Outlet for the pages below)
+    Admin{Products,News,Jobs}.tsx        list + delete
+    Admin{Product,News,Job}Form.tsx      shared create/edit form
+    Admin{Applications,Contacts}.tsx     read + delete only, nothing to edit
 ```
 
 ## Environment

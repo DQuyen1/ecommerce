@@ -18,7 +18,7 @@
 
   --ink: #231c17;
   --ink-2: #3d322a;
-  --muted: #7c6a5d;
+  --muted: #6e5c4f;
   --line: #e8ded3;
   --line-strong: #d8c8b8;
 
@@ -138,6 +138,7 @@ h4 {
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--ink);
+  text-wrap: balance;
 }
 
 /* Display headings carry their weight through the serif itself, so they are
@@ -168,11 +169,17 @@ h3 {
 
 p {
   margin: 0 0 1em;
+  text-wrap: pretty;
+}
+
+blockquote {
+  text-wrap: pretty;
 }
 
 .lede {
-  font-size: 1.06rem;
-  color: var(--muted);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink-2);
   max-width: 54ch;
 }
 
